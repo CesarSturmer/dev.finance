@@ -1,0 +1,24 @@
+:root {
+  --black: #2a2530;
+  --black-dark: #1f1b24;
+  --white: #fff;
+  --dark: #0e0e0e;
+}
+
+html[dark] {
+  --text-color: #f0f2f5;
+  --text-color-light: #fff;
+  --input-background-color: #f0f2f5;
+  --background-color: #0f0516;
+  --light-green: #2baa6a;
+  --background-black: #003628;
+  --background-green: #0d0312;
+  --positive: #003828;
+  --negative: #e92929;
+  --white: #0d0312;
+}
+
+.button-mode-active {
+  background-image: none;
+  background-image: url("assets/moon.svg");
+}

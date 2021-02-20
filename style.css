@@ -2,6 +2,17 @@
     --dark-blue: #363f5f;
     --green:  #49AA26;
     --light-green: #3dd705;
+
+
+    --text-color: #363f5f;
+    --text-color-light: #fff;
+    --input-background-color: #fff;
+    --background-color: #f0f2f5;
+    --background-black: #0d0312;
+    --background-green: #003628;
+    --positive: #003828;
+    --negative: #e92929;
+    --white: #fff;
 }
 
 *{
@@ -11,16 +22,31 @@
 }
 
 body {
-    background:  #f0f2f5;
-    font-family: 'Poppins', sans-serif;    
-}
+    background: var(--background-color);
+    font-family: "Poppins", sans-serif;
+    transition: 0.2s;
+  }
 
 html {
     font-size: 93.75%; /* 15px */
 }
 
+input,
+select,
+textarea,
+::placeholder {
+  color: var(--positive);
+}
+
+/* regra para esconder o checkbox do darkmode */
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
 .sr-only {
     position: absolute;
+    border: solid 1px red;
     width: 1px;
     height: 1px;
     padding: 0;
@@ -92,12 +118,31 @@ a:hover{
     margin-bottom: .8rem;
 }
 
+.button-mode {
+    width: 32px;
+    height: 32px;
+    background-image: url("assets/sun.svg");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 0.2s;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
 
 /*----------------- header------------ */
 header{
     background: #2D4A22;
     padding: 2rem 0 10rem;
     text-align: center;
+
+    padding: 4rem 0 12rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
 }
 
 
@@ -115,14 +160,16 @@ header{
 
 /*----------------- cards------------ */
 
-.card{
-    background: white;
-    border-radius: 0.25rem;
-    color: var(--dark-blue);
+.card {
+    background: var(--white);
     padding: 1.5rem 2rem;
+    border-radius: 0.25rem;
     margin-bottom: 2rem;
-
-}
+  
+    color: var(--text-color);
+    box-shadow: 6px 4px 4px 2px rgba(0, 0, 0, 0.25);
+    transition: 0.2s;
+  }
 
 .card h3{
     align-items: center;
@@ -245,6 +292,7 @@ input {
     border-radius: 0.2rem;
     padding: 0.8rem;
     width: 100%;
+    background-color: var(--input-background-color);
 }
 
 .input-group {
