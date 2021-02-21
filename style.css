@@ -8,7 +8,7 @@
     --text-color-light: #fff;
     --input-background-color: #fff;
     --background-color: #f0f2f5;
-    --background-black: #0d0312;
+    --background-gradient: #1c1b1d;
     --background-green: #003628;
     --positive: #003828;
     --negative: #e92929;
@@ -128,13 +128,17 @@ a:hover{
     position: absolute;
     top: 2rem;
     right: 2rem;
+    display: inline-block;
   }
 
 
 /*----------------- header------------ */
 header{
-    background: #2D4A22;
-    padding: 2rem 0 10rem;
+    background: linear-gradient(
+        180deg,
+        var(--background-green) 0%,
+        var(--background-gradient) 100%
+      );    padding: 2rem 0 10rem;
     text-align: center;
 
     padding: 4rem 0 12rem;
@@ -191,6 +195,16 @@ header{
     background: var(--green);
     color: white;
 }
+
+.icon-add {
+    height: 40px;
+    opacity: 1;
+    transition: 0.2s;
+}
+.icon-add:hover {
+    opacity: 0.9;
+}
+
 
 /*----------------- table------------ */
 #transaction {
